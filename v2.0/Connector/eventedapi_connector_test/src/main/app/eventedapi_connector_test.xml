@@ -10,7 +10,7 @@ http://www.mulesoft.org/schema/mule/eventing http://www.mulesoft.org/schema/mule
 http://www.mulesoft.org/schema/mule/evented-api http://www.mulesoft.org/schema/mule/evented-api/current/mule-evented-api.xsd
 http://www.mulesoft.org/schema/mule/ee/dw http://www.mulesoft.org/schema/mule/ee/dw/current/dw.xsd">
     <http:listener-config name="HTTP_Listener_Configuration" host="0.0.0.0" port="8081" doc:name="HTTP Listener Configuration"/>
-    <evented-api:config name="EventedApi__Configuration" amfDocSpecificationFile="/Users/brunobaloi/MULESOFT/EventedAPI/AMF_Projects/examples/EventedAPI_Banking.raml" amfDialectSpecificationDir="/Users/brunobaloi/MULESOFT/EventedAPI/AMF_Projects/Dialects" doc:name="EventedApi: Configuration" amfLib="/Users/brunobaloi/AnypointStudio/workspace_6.2.3_evented_api_2/eventedapi_connector_test/src/main/resources/lib/amf.jar" amParseCmd="/Users/brunobaloi/AnypointStudio/workspace_6.2.3_evented_api_2/eventedapi_connector_test/src/main/resources/amf_parse.sh" eventedAPiConnectorProperties="/Users/brunobaloi/AnypointStudio/workspace_6.2.3_evented_api_2/eventedapi_connector_test/src/main/resources/eventedapi-connector.properties"/>
+    <evented-api:config name="EventedApi__Configuration" amfDocSpecificationFile="${amf.DocSpecificationFile}" amfDialectSpecificationDir="${amf.DialectSpecificationDir}" doc:name="EventedApi: Configuration" amfLib="${amf.Lib}" amParseCmd="${amf.ParseCmd}" eventedAPiConnectorProperties="${eventedAPiConnectorProperties}"/>
     <flow name="eventedapi_connector_testFlow1">
         <http:listener config-ref="HTTP_Listener_Configuration" path="/" doc:name="HTTP"/>
         <set-payload value="blahblah" doc:name="Set Payload" mimeType="application/json"/>

@@ -24,6 +24,23 @@ transports:
         userID: me
         userPassword: password
 
+  mqttPahoTransport:
+     transportID: mqttPaho123
+     transportType: mqtt
+     transportVendor: Paho
+     transportConnection:
+        connectionID: mqttPahoConn123
+        # ===> Solace
+        host: mr-akw23icep.messaging.solace.cloud
+        port: 20838
+        userID: solace-cloud-client
+        userPassword: 21cvakgpf5ccoa3oo3q51htip6
+        # ===> ActiveMQ
+        #host: localhost
+        #port: 1883
+        #userID: admin
+        #userPassword: admin
+
   natsTransport:
     transportID: nats123
     transportType: nats
@@ -56,3 +73,14 @@ transports:
       port: 61616
       userID: me
       userPassword: password
+
+  amqpSolaceTransport:
+    transportID: amqpSolace123
+    transportType: amqp
+    transportVendor: Solace
+    transportConnection:
+      connectionID: amqpSolaceConn123
+      host: mr-akw23icep.messaging.solace.cloud
+      port: 20844
+      userID: solace-cloud-client
+      userPassword: 21cvakgpf5ccoa3oo3q51htip6
