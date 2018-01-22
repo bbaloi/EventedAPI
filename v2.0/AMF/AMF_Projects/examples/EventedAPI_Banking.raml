@@ -10,9 +10,11 @@ subjects:
      subjectID: subject123
      eventPattern: pub-sub
      eventTransports:
-      - transports.jmsTransport
-      - transports.mqttTransportAMQ
+     # - transports.jmsTransport
+     # - transports.mqttTransportAMQ
       - transports.solaceTransport
+      - transports.mqttPahoTransport
+      - transports.amqpSolaceTransport
      supportedEvents:
        - bankingEvents.paymentEvent
        - bankingEvents.accountCreditEvent
